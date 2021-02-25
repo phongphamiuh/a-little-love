@@ -1,0 +1,111 @@
+<!-- Created by Arman Tepnanc -->
+
+<!-- Created by Sofi -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For-You</title>
+    <link rel="stylesheet" href="for-you.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="conteiner">
+        <div class="row">
+            <div class="col-lg-12 col-md-12">
+                <iframe width="420" height="250" src="https://www.youtube.com/embed/SGBWE8ydqWs">
+                </iframe>
+                <div id="h">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div id="heart">
+
+            </div>
+        </div>
+        
+        <h1 id="h1" onclick="f()">touch my heart</h1>
+    </div>
+
+    <script>
+        let h1 = document.getElementById('h1')
+        h1.style.fontSize="23px";
+        let heart = document.getElementById('heart')
+        function f() {
+            if (h1.innerHTML == "touch my heart") {
+                heart.style.animation = "animate 2s forwards"
+                setTimeout(() => {
+                    h1.innerHTML = "宝贝"
+                    h1.style.borderRadius = "15px";
+                    h1.style.fontSize="58px"
+                    h1.style.textShadow="1px 5px 10px #FF4F80, -1px -7px 10px #FF4F80";
+                    setTimeout(()=>{
+                        h1.innerHTML = "Hong giận anh nữa nha"
+                        setTimeout(()=>{
+                            h1.innerHTML = "Em dễ thương"
+                            setTimeout(()=>{
+                                h1.innerHTML = "Anh yêu em nhiều"
+                                setTimeout(()=>{
+                                    h1.innerHTML = "Click on the word to go back"
+                                    h1.style.fontSize="43px";
+                                },3600)
+                            },3500)
+                        },3000)
+                    },2000)
+                }, 1500);
+            } else {
+                heart.style.animation = "animate2 2s forwards"
+                setTimeout(() => {
+                    h1.innerHTML = "touch my heart"
+                    h1.style.fontSize="23px"
+                }, 1500);
+            }
+        }
+    </script>
+
+    <script>
+        var text = "Click on the video,Tomorrow we go to eat mixed rice paper and drink milk tea, Please press the heart";
+        var t = document.getElementById("h");
+        var i = 0;
+
+        var len = text.length;
+        function show() {
+            if (i % 2 == 0) {
+                t.innerHTML += text.charAt(i);
+                t.style.color = "yellow";
+            }
+            else {
+                t.innerHTML += text.charAt(i);
+                t.style.color = "yellow";
+            }
+            hide(i);
+            i++;
+            t.style.fontSize = "20px";
+            t.style.backgroundColor = "#FF4F80";
+            t.style.border = "3px solid black";
+            t.style.borderRadius = "15px";
+            t.style.fontFamily = "cursive";
+            t.style.fontWeight = "bold";
+            t.style.padfingLeft = "10px";
+            t.style.marginTop = "190px";
+
+        }
+        var x = setInterval(show, 90);
+        function hide(t) {
+            if (len == t)
+                clearInterval(x);
+        }
+    </script>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+
+</html>
